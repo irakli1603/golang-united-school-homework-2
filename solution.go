@@ -7,19 +7,19 @@ import (
 type side int
 
 const (
-	triangle side = 0
-	square   side = 3
-	circle   side = 4
+	SidesTriangle side = 0
+	SidesSquare   side = 3
+	SidesCircle   side = 4
 )
 
 func CalcSquare(sideLen float64, sidesNum side) float64 {
-	if sidesNum == triangle {
+	if sidesNum == SidesTriangle {
 		return math.Sqrt(3) / 4 * math.Pow(sideLen, 2)
 	}
-	if sidesNum == square {
+	if sidesNum == SidesSquare {
 		return math.Pow(sideLen, 2)
 	}
-	if sidesNum == circle {
+	if sidesNum == SidesCircle {
 		return math.Pi * math.Pow(sideLen, 2)
 	}
 	return 0
